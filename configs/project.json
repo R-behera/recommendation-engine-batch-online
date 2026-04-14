@@ -1,0 +1,49 @@
+{
+  "slug": "recommendation-engine-batch-online",
+  "title": "Recommendation Engine Batch + Online",
+  "project_type": "ml",
+  "domain": "Commerce AI",
+  "summary": "Blend batch candidate generation and online ranking into a starter recommender workflow.",
+  "tags": [
+    "recommendations",
+    "ranking",
+    "commerce"
+  ],
+  "accent": "#2a9d8f",
+  "dashboard_metrics": [
+    {
+      "label": "Model Lift",
+      "value": "70%",
+      "delta": "+6.4%"
+    },
+    {
+      "label": "Serving P95",
+      "value": "123ms",
+      "delta": "-12ms"
+    },
+    {
+      "label": "Data Freshness",
+      "value": "7h",
+      "delta": "steady"
+    }
+  ],
+  "sample_features": {
+    "engagement_score": 75,
+    "tenure_days": 189,
+    "payment_miss_count": 1,
+    "segment": "enterprise",
+    "priority_flag": true
+  },
+  "sample_metrics": {
+    "acquisition": 38.1,
+    "activation": 38.5,
+    "retention": 51.2,
+    "revenue": 81.7
+  },
+  "knowledge_base": [
+    "Recommendation Engine Batch + Online is positioned as a Commerce AI starter that emphasizes fast iteration, clear documentation, and production-friendly interfaces.",
+    "The primary value proposition is: Blend batch candidate generation and online ranking into a starter recommender workflow.",
+    "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
+    "Typical stakeholders include analytics, operations, product, and leadership teams working on recommendations, ranking, commerce."
+  ]
+}
