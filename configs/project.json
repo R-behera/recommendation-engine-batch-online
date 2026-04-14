@@ -9,7 +9,8 @@
     "ranking",
     "commerce"
   ],
-  "accent": "#2a9d8f",
+  "accent": "#2c77c8",
+  "secondary_accent": "#2ca9a3",
   "dashboard_metrics": [
     {
       "label": "Model Lift",
@@ -45,5 +46,52 @@
     "The primary value proposition is: Blend batch candidate generation and online ranking into a starter recommender workflow.",
     "Recommended operating model: ship a small API, add observability, validate outputs with stakeholder review, and monitor the top business KPI every week.",
     "Typical stakeholders include analytics, operations, product, and leadership teams working on recommendations, ranking, commerce."
+  ],
+  "app_archetype": "workbench",
+  "ui_profile": {
+    "layout": "rail",
+    "surface": "mist",
+    "font_stack": "\"Plus Jakarta Sans\", \"Segoe UI\", sans-serif",
+    "radius": 21,
+    "shadow": 53,
+    "eyebrow_style": "soft",
+    "module_columns": 3,
+    "hero_align": "center",
+    "headline_mode": "tall"
+  },
+  "app_modules": [
+    {
+      "label": "Workbench 01",
+      "title": "Candidate Builder",
+      "description": "Evaluate a single candidate, item, or entity against the decision logic.",
+      "endpoint": "/score",
+      "input_mode": "json",
+      "cta": "Evaluate Candidate",
+      "prefill": "{\n  \"features\": {\n    \"engagement_score\": 75,\n    \"tenure_days\": 189,\n    \"payment_miss_count\": 1,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  }\n}",
+      "hint": "Candidate score and top factors will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Workbench 02",
+      "title": "Tradeoff Explorer",
+      "description": "Compare multiple operating metrics against a baseline to understand the tradeoffs.",
+      "endpoint": "/analyze",
+      "input_mode": "json",
+      "cta": "Explore Tradeoffs",
+      "prefill": "{\n  \"metrics\": {\n    \"acquisition\": 38.1,\n    \"activation\": 38.5,\n    \"retention\": 51.2,\n    \"revenue\": 81.7\n  },\n  \"baseline\": {\n    \"acquisition\": 35.05,\n    \"activation\": 35.42,\n    \"retention\": 47.1,\n    \"revenue\": 75.16\n  }\n}",
+      "hint": "Tradeoff summary will appear here.",
+      "span": "normal"
+    },
+    {
+      "label": "Workbench 03",
+      "title": "Next-Step Planner",
+      "description": "Turn the current signals into an implementation-ready next-step recommendation.",
+      "endpoint": "/recommend",
+      "input_mode": "json",
+      "cta": "Plan Next Step",
+      "prefill": "{\n  \"prompt\": \"Recommend the next best action for Recommendation Engine Batch + Online.\",\n  \"features\": {\n    \"engagement_score\": 75,\n    \"tenure_days\": 189,\n    \"payment_miss_count\": 1,\n    \"segment\": \"enterprise\",\n    \"priority_flag\": true\n  },\n  \"metrics\": {\n    \"acquisition\": 38.1,\n    \"activation\": 38.5,\n    \"retention\": 51.2,\n    \"revenue\": 81.7\n  }\n}",
+      "hint": "Recommended actions and rationale will appear here.",
+      "span": "wide"
+    }
   ]
 }
